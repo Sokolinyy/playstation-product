@@ -1,0 +1,265 @@
+$mainBlue: rgb(0, 104, 189);
+
+* {
+  margin: 0;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  height: 500vh;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: white;
+
+  .sonyLogo {
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: right;
+    height: 5vh;
+
+    p {
+      margin: 0;
+      padding: 5px 20px;
+      font-size: 20px;
+    }
+  }
+
+  .products {
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);;
+
+    .products-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+
+      p {
+        background-color: rgb(241, 241, 241);
+        padding: 5px 10px;
+        border-radius: 20px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(219, 219, 219);;
+        }
+      }
+    }
+
+    .buyBtn {
+      border: none;
+      color: white;
+      background-color: rgb(212, 71, 0);
+      font-size: 17px;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+.main {
+  margin-top: 100px;
+
+  .bgImage {
+    position: relative;
+
+    .bgDualsense {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      object-position: top;
+      filter: blur(3px); 
+    }
+  }
+
+  .productInfoContainer {
+    width: 80vw;
+    position: absolute;
+    top: 50%; /* Set the top position to 50% of the parent container */
+    left: 50%; /* Set the left position to 50% of the parent container */
+    transform: translate(-50%, -50%); /* Move the child element back by half its width and height */
+    background-color: rgba(240, 240, 240, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .productName {
+      font-size: 8vh;
+      color: $mainBlue;
+      font-weight: 400;
+    }
+
+    .productDescription {
+      font-size: 1.3rem;
+      color: rgb(0, 0, 0);
+
+      p {
+        padding: 20px;
+      }
+    }
+  }
+
+  .feature {
+
+    .featureContainer {
+      display: flex;
+      width: 70%;
+      margin: auto auto;
+  
+      .featureElement {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+  
+        h2 {
+          padding: 30px 0px;
+        }
+  
+        p {
+          max-width: 90%;
+        }
+  
+        .featureImage {
+          max-width: 100px;
+        }
+      }
+    }
+  }
+}
+
+.new-section-h2 {
+  color: $mainBlue;
+  font-size: 2.2rem;
+  text-align: center;
+  padding: 40px 0px;
+}
+
+.dualsense {
+  margin-top: 50px;
+
+  .dualsenseContainer {
+    height: 100vh;
+    background: linear-gradient(94deg, rgb(8, 140, 206) 20%, rgb(189, 35, 81) 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 2s ease-in-out;
+
+    .left {
+      width: 50%;
+      height: 100%;
+      position: relative;
+
+      .blueDualImg {
+        position: absolute;
+        width: 70%;
+        left: 0;
+        left: 0%;
+        top: 50%; /* Set the top position to 50% of the parent container */
+        transform: translate(-50%, -50%); /* Move the child element back by half its width and height */
+        transition: all 0.5s ease-in; // Smoothly change position
+      }
+
+      .colorName {
+        position: absolute;
+        width: 70%;
+        left: 72%;
+        bottom: 0;
+        transform: translate(-50%, -50%); /* Move the child element back by half its width and height */
+        transition: all 0.5s ease-in; // Smoothly change position
+        font-size: 30px;
+        color: rgb(175, 218, 255);
+        font-family: 'Merriweather', serif;
+        opacity: 0;
+      }
+
+      &:hover .blueDualImg {
+        left: 55%;
+        overflow: visible;
+      }
+
+      &:hover .colorName {
+        left: 71%;
+        bottom: 200px;
+        opacity: 1;
+      }
+    }
+
+    .right {
+      width: 50%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    
+      .redDualImg {
+        position: absolute;
+        width: 70%;
+        top: 50%; /* Set the top position to 50% of the parent container */
+        left: 100%; /* Set the left position to 50% of the parent container */
+        transform: translate(-50%, -50%); /* Move the child element back by half its width and height */
+        transition: all 0.5s ease-in;
+      }
+
+      .colorName {
+        position: absolute;
+        width: 70%;
+        right: 72%;
+        bottom: 0;
+        transform: translate(-50%, -50%); /* Move the child element back by half its width and height */
+        transition: all 0.5s ease-in; // Smoothly change position
+        font-size: 30px;
+        color: rgb(255, 179, 200);
+        font-family: 'Merriweather', serif;
+        opacity: 0;
+      }
+
+      &:hover .redDualImg {
+        left: 45%;
+      }
+
+      &:hover .colorName {
+        left: 66%;
+        bottom: 200px;
+        opacity: 1;
+      }
+
+    }
+  }
+}
+
+[data-aos="shake"] {
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-10px) rotate(-10deg);
+    }
+    75% {
+      transform: translateX(10px) rotate(10deg);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  &.aos-animate {
+    animation: shake 1s ease-out;
+  }
+}
