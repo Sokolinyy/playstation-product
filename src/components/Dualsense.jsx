@@ -1,13 +1,48 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import blueDual from "../img/DUALSENSE_STARLIGHTBLUE.jpg"
 import redDual from "../img/DUALSENSE_COSMICRED.png"
 import WhiteDual from "../img/DUALSENSE_WHITE.png"
 import purpleDual from "../img/DUALSENSE_GALACTIC_PURPLE.png"
 import blackDual from "../img/DUALSENSE_BLACK.jpg"
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import background from "../img/IMG_0686.PNG"
 
 
 const Dualsense = () => {
+  
+  useEffect(() => {
+    const white = document.querySelector(".whiteDualsense");
+    const purple = document.querySelector(".purpleDualsense");
+    const black = document.querySelector(".blackDualsense");
+    const whiteBg = document.querySelector(".differentColors.white")
+    const purpleBg = document.querySelector(".differentColors.purple")
+    const blackBg = document.querySelector(".differentColors.black")
+
+    const handleScroll = () => {
+      let offsetY = window.scrollY;
+  
+      if (white) {
+        white.style.transform = `translateX(calc(-220vh + ${offsetY * 0.8}px)`;
+        purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+      }
+  
+      if (purple) {
+        purple.style.transform = `translateX(calc(360vh - ${offsetY}px)`
+        purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+
+      }
+  
+      if (black) {
+        black.style.transform = `translateX(calc(-400vh + ${offsetY * 0.8}px)`;
+        blackBg.style.backgroundPositionY = `-${offsetY * 0.5}px`
+      }
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <section className='dualsense'>
@@ -25,13 +60,16 @@ const Dualsense = () => {
       <h2 className='new-section-h2'>AVAILABLE IN MANY COLORS</h2>
       <div>
         <div className='differentColors white'>
-          <img src={WhiteDual} alt="" />
+          <h2>WHITE</h2>
+          <img className='whiteDualsense' src={WhiteDual} alt="" />
         </div>
         <div className='differentColors purple'>
-          <img src={purpleDual} alt="" />
+          <h2>GALACTIC PURPLE</h2>
+          <img className='purpleDualsense' src={purpleDual} alt="" />
         </div>
         <div className='differentColors black'>
-          <img src={blackDual} alt="" />
+          <h2>BLACK</h2>
+          <img className='blackDualsense' src={blackDual} alt="" />
         </div>
       </div>
     </section>
