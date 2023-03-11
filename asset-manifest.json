@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/playstation-product/static/css/main.1bed60ea.css",
+    "main.js": "/playstation-product/static/js/main.1cb68c8c.js",
+    "static/media/DUALSENSE_WHITE.png": "/playstation-product/static/media/DUALSENSE_WHITE.a79e242575c828879a96.png",
+    "static/media/IMG_0686.PNG": "/playstation-product/static/media/IMG_0686.37c3e70818e3e9370b5e.PNG",
+    "static/media/DUALSENSE_STARLIGHTBLUE.jpg": "/playstation-product/static/media/DUALSENSE_STARLIGHTBLUE.302598258a19c398975d.jpg",
+    "static/media/DUALSENSE_BLACK.jpg": "/playstation-product/static/media/DUALSENSE_BLACK.74a39a73033d7aa3dd6a.jpg",
+    "static/media/DUALSENSE_COSMICRED.png": "/playstation-product/static/media/DUALSENSE_COSMICRED.027b727ae2329714aa7b.png",
+    "static/media/adaptiveTriggersIcon.jpg": "/playstation-product/static/media/adaptiveTriggersIcon.1f5af81acce4e6a5f4dd.jpg",
+    "static/media/dualsenseBackground.jpg": "/playstation-product/static/media/dualsenseBackground.00f6ecc951ce48628621.jpg",
+    "static/media/hapticIcon.jpg": "/playstation-product/static/media/hapticIcon.25477439fdbedb69d5c6.jpg",
+    "static/media/DUALSENSE_GALACTIC_PURPLE.png": "/playstation-product/static/media/DUALSENSE_GALACTIC_PURPLE.4ea27d6bba2a0d0e19a3.png",
+    "static/media/bg2.png": "/playstation-product/static/media/bg2.b4387727590be0d20f9b.png",
+    "static/media/bg1.png": "/playstation-product/static/media/bg1.e313c940a62e4c16a42e.png",
+    "static/media/playstation-logo-blue.png": "/playstation-product/static/media/playstation-logo-blue.827c9665a22f7b460052.png",
+    "index.html": "/playstation-product/index.html",
+    "main.1bed60ea.css.map": "/playstation-product/static/css/main.1bed60ea.css.map",
+    "main.1cb68c8c.js.map": "/playstation-product/static/js/main.1cb68c8c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1bed60ea.css",
+    "static/js/main.1cb68c8c.js"
+  ]
+}
