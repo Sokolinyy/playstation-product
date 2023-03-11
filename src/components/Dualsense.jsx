@@ -5,6 +5,7 @@ import WhiteDual from "../img/DUALSENSE_WHITE.png"
 import purpleDual from "../img/DUALSENSE_GALACTIC_PURPLE.png"
 import blackDual from "../img/DUALSENSE_BLACK.jpg"
 import background from "../img/IMG_0686.PNG"
+import psLogo from "../img/playstation-logo-blue.png"
 
 
 const Dualsense = () => {
@@ -18,25 +19,27 @@ const Dualsense = () => {
     const blackBg = document.querySelector(".differentColors.black")
 
     const handleScroll = () => {
+      // Make animation when user scroll the page
       let offsetY = window.scrollY;
   
       if (white) {
-        white.style.transform = `translateX(calc(-220vh + ${offsetY * 0.8}px)`;
+        white.style.transform = `translateX(calc(-250vh + ${offsetY * 0.8}px)`;
         purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
       }
   
       if (purple) {
-        purple.style.transform = `translateX(calc(360vh - ${offsetY}px)`
+        purple.style.transform = `translateX(calc(380vh - ${offsetY}px)`
         purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
 
       }
   
       if (black) {
-        black.style.transform = `translateX(calc(-400vh + ${offsetY * 0.8}px)`;
+        black.style.transform = `translateX(calc(-420vh + ${offsetY * 0.8}px)`;
         blackBg.style.backgroundPositionY = `-${offsetY * 0.5}px`
       }
     };
   
+    // Animation for Haptic feedback, and Adaptive triggers image
     window.addEventListener('scroll', handleScroll);
   
     return () => {
@@ -71,6 +74,10 @@ const Dualsense = () => {
           <h2>BLACK</h2>
           <img className='blackDualsense' src={blackDual} alt="" />
         </div>
+      </div>
+        <h2 className='new-section-h2'>Stay tuned...</h2>
+      <div className='stay-tuned'>
+        <img src={psLogo} alt="" />
       </div>
     </section>
   )
