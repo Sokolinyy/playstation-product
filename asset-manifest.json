@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/playstation-product/static/css/main.439e232f.css",
-    "main.js": "/playstation-product/static/js/main.7c23fb45.js",
+    "main.css": "/playstation-product/static/css/main.471dcc8a.css",
+    "main.js": "/playstation-product/static/js/main.cd70274b.js",
     "static/media/DUALSENSE_WHITE.png": "/playstation-product/static/media/DUALSENSE_WHITE.a79e242575c828879a96.png",
     "static/media/IMG_0686.PNG": "/playstation-product/static/media/IMG_0686.37c3e70818e3e9370b5e.PNG",
     "static/media/DUALSENSE_STARLIGHTBLUE.jpg": "/playstation-product/static/media/DUALSENSE_STARLIGHTBLUE.302598258a19c398975d.jpg",
@@ -15,11 +15,11 @@
     "static/media/bg1.png": "/playstation-product/static/media/bg1.e313c940a62e4c16a42e.png",
     "static/media/playstation-logo-blue.png": "/playstation-product/static/media/playstation-logo-blue.827c9665a22f7b460052.png",
     "index.html": "/playstation-product/index.html",
-    "main.439e232f.css.map": "/playstation-product/static/css/main.439e232f.css.map",
-    "main.7c23fb45.js.map": "/playstation-product/static/js/main.7c23fb45.js.map"
+    "main.471dcc8a.css.map": "/playstation-product/static/css/main.471dcc8a.css.map",
+    "main.cd70274b.js.map": "/playstation-product/static/js/main.cd70274b.js.map"
   },
   "entrypoints": [
-    "static/css/main.439e232f.css",
-    "static/js/main.7c23fb45.js"
+    "static/css/main.471dcc8a.css",
+    "static/js/main.cd70274b.js"
   ]
 }
