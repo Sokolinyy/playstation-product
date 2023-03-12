@@ -1,8 +1,21 @@
 $mainBlue: rgb(0, 104, 189);
 
+@mixin mobile {
+  @media screen and (max-width: 420px) {
+    @content;
+  }
+}
+
+@mixin mobile-sm {
+  @media screen and (min-width: 415px) {
+    @content
+  }
+}
+
+
 * {
   margin: 0;
-  font-family: 'Golos Text', sans-serif;
+  font-family: "Golos Text", sans-serif;
   font-weight: 400;
 }
 
@@ -37,13 +50,16 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
 
     .products-list {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 40px;
+      @include mobile {
+        display: none;
+      }
 
       p {
         background-color: rgb(241, 241, 241);
@@ -52,7 +68,7 @@ body {
         cursor: pointer;
 
         &:hover {
-          background-color: rgb(219, 219, 219);;
+          background-color: rgb(219, 219, 219);
         }
       }
     }
@@ -81,13 +97,14 @@ body {
 
   .bgImage {
     position: relative;
+    top: 30px;
 
     .bgDualsense {
       width: 100%;
       height: 400px;
       object-fit: cover;
       object-position: top;
-      filter: blur(3px); 
+      filter: blur(3px);
     }
   }
 
@@ -96,7 +113,10 @@ body {
     position: absolute;
     top: 50%; /* Set the top position to 50% of the parent container */
     left: 50%; /* Set the left position to 50% of the parent container */
-    transform: translate(-50%, -50%); /* Move the child element back by half its width and height */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Move the child element back by half its width and height */
     background-color: rgba(240, 240, 240, 0.7);
     display: flex;
     flex-direction: column;
@@ -107,11 +127,18 @@ body {
       font-size: 8vh;
       color: $mainBlue;
       font-weight: 400;
+      @include mobile {
+        font-size: 5vh;
+        text-align: center;
+      }
     }
 
     .productDescription {
       font-size: 1.3rem;
       color: rgb(0, 0, 0);
+      @include mobile {
+        font-size: 1.1rem;
+      }
 
       p {
         padding: 20px;
@@ -120,27 +147,32 @@ body {
   }
 
   .feature {
-
     .featureContainer {
       display: flex;
-      width: 70%;
-      margin: auto auto;
-  
+      width: 100%;
+      justify-content: space-evenly;
+      @include mobile {
+        flex-direction: column;
+      }
+
       .featureElement {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
-  
+        @include mobile {
+          padding: 30px;
+        }
+
         h2 {
           padding: 30px 0px;
         }
-  
+
         p {
-          max-width: 90%;
+          max-width: 500px;
         }
-  
+
         .featureImage {
           max-width: 100px;
         }
@@ -162,7 +194,11 @@ body {
 
   .dualsenseContainer {
     height: 100vh;
-    background: linear-gradient(94deg, rgb(8, 140, 206) 20%, rgb(189, 35, 81) 60%);
+    background: linear-gradient(
+      94deg,
+      rgb(8, 140, 206) 20%,
+      rgb(189, 35, 81) 60%
+    );
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,8 +215,14 @@ body {
         left: 0;
         left: 0%;
         top: 50%; /* Set the top position to 50% of the parent container */
-        transform: translate(-50%, -50%); /* Move the child element back by half its width and height */
+        transform: translate(
+          -50%,
+          -50%
+        ); /* Move the child element back by half its width and height */
         transition: all 0.5s ease-in; // Smoothly change position
+        @include mobile {
+          width: 100%;
+        }
       }
 
       .colorName {
@@ -188,12 +230,18 @@ body {
         width: 70%;
         left: 72%;
         bottom: 0;
-        transform: translate(-50%, -50%); /* Move the child element back by half its width and height */
+        transform: translate(
+          -50%,
+          -50%
+        ); /* Move the child element back by half its width and height */
         transition: all 0.5s ease-in; // Smoothly change position
         font-size: 30px;
         color: rgb(175, 218, 255);
-        font-family: 'Merriweather', serif;
+        font-family: "Merriweather", serif;
         opacity: 0;
+        @include mobile {
+          font-size: 24px;
+        }
       }
 
       &:hover .blueDualImg {
@@ -205,6 +253,10 @@ body {
         left: 71%;
         bottom: 200px;
         opacity: 1;
+        @include mobile {
+          left: 72%;
+          bottom: 180px;
+        }
       }
     }
 
@@ -213,14 +265,20 @@ body {
       height: 100%;
       position: relative;
       overflow: hidden;
-    
+
       .redDualImg {
         position: absolute;
         width: 70%;
         top: 50%; /* Set the top position to 50% of the parent container */
         left: 100%; /* Set the left position to 50% of the parent container */
-        transform: translate(-50%, -50%); /* Move the child element back by half its width and height */
+        transform: translate(
+          -50%,
+          -50%
+        ); /* Move the child element back by half its width and height */
         transition: all 0.5s ease-in;
+        @include mobile {
+          width: 100%;
+        }
       }
 
       .colorName {
@@ -228,22 +286,36 @@ body {
         width: 70%;
         right: 72%;
         bottom: 0;
-        transform: translate(-50%, -50%); /* Move the child element back by half its width and height */
+        transform: translate(
+          -50%,
+          -50%
+        ); /* Move the child element back by half its width and height */
         transition: all 0.5s ease-in; // Smoothly change position
         font-size: 30px;
         color: rgb(255, 179, 200);
-        font-family: 'Merriweather', serif;
+        font-family: "Merriweather", serif;
         opacity: 0;
+        @include mobile {
+          font-size: 24px;
+          text-align: center;
+        }
       }
 
       &:hover .redDualImg {
         left: 45%;
+        @include mobile {
+          left: 50%;
+        }
       }
 
       &:hover .colorName {
         left: 66%;
         bottom: 200px;
         opacity: 1;
+        @include mobile {
+          left: 51%;
+          bottom: 220px;
+        }
       }
     }
   }
@@ -253,6 +325,9 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    
+
+    }
 
     img {
       width: 50%;
@@ -266,10 +341,20 @@ body {
     h2 {
       position: absolute;
       right: 220px;
-      font-size: 40px;
+      font-size: 60px;
       border: 3px solid black;
       border-radius: 5px;
       padding: 10px 20px;
+
+      @include mobile {
+        position: absolute;
+        right: 70px;
+        bottom: 10px;
+        font-size: 50px;
+        border: 3px solid black;
+        border-radius: 5px;
+        padding: 10px 20px;
+      }
     }
   }
 
@@ -279,10 +364,24 @@ body {
     background-image: url("./img/bg1.png");
 
     h2 {
-      font-size: 40px;
+      position: absolute;
+      left: 220px;
+      left: 60px;
+      font-size: 50px;
       border: 3px solid black;
       border-radius: 5px;
       padding: 10px 20px;
+
+      @include mobile {
+        position: absolute;
+        right: 30px;
+        left: 50px;
+        bottom: 10px;
+        font-size: 50px;
+        border: 3px solid black;
+        border-radius: 5px;
+        padding: 10px 20px;
+      }
     }
   }
 
@@ -293,12 +392,23 @@ body {
 
     h2 {
       position: absolute;
-      right: 320px;
-      font-size: 40px;
+      right: 220px;
+      font-size: 60px;
       color: white;
       border: 3px solid rgb(255, 255, 255);
       border-radius: 5px;
       padding: 10px 20px;
+
+      @include mobile {
+        position: absolute;
+        right: 90px;
+        bottom: 10px;
+        font-size: 40px;
+        color: white;
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        padding: 10px 20px;
+      }
     }
   }
 
@@ -306,11 +416,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(1,49,78);
-    background: linear-gradient(54deg, rgba(1,49,78,1) 31%, rgba(0,115,177,1) 100%);
+    background: rgb(1, 49, 78);
+    background: linear-gradient(
+      54deg,
+      rgba(1, 49, 78, 1) 31%,
+      rgba(0, 115, 177, 1) 100%
+    );
     height: 100vh;
   }
-}
+
+
 
 // Create custom animation with AOS, called shake
 [data-aos="shake"] {

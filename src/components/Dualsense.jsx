@@ -9,7 +9,6 @@ import psLogo from "../img/playstation-logo-blue.png"
 
 
 const Dualsense = () => {
-  
   useEffect(() => {
     const white = document.querySelector(".whiteDualsense");
     const purple = document.querySelector(".purpleDualsense");
@@ -19,24 +18,98 @@ const Dualsense = () => {
     const blackBg = document.querySelector(".differentColors.black")
 
     const handleScroll = () => {
+      let w = window.innerWidth;
+      let h = window.innerHeight;
+
       // Make animation when user scroll the page
       let offsetY = window.scrollY;
   
       if (white) {
-        white.style.transform = `translateX(calc(-250vh + ${offsetY * 0.8}px)`;
-        purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+        // Size for desktop
+        if (w > 511) {
+          white.style.transform = `translateX(calc(-250vh + ${offsetY * 0.8}px)`;
+          whiteBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+        }
+        // Size for iphone 12 pro (width - 390)
+        else if (w <= 510 && w > 400) {
+          white.style.transform = `translateX(calc(-220vh + ${offsetY * 0.8}px)`;
+          whiteBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+        }
+        // Size for iphone XR pro (width - 414)
+        else if (w <= 400 && w > 385) {
+          white.style.transform = `translateX(calc(-230vh + ${offsetY * 0.8}px)`;
+          whiteBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+        }
+        // Samsung S8 (width 360)
+        else if (w <= 365 && w > 350) {
+          white.style.transform = `translateX(calc(-253vh + ${offsetY * 0.8}px)`;
+          whiteBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+        }
+        // Size for iphone SE pro (width - 390)
+        else if (w <= 380) {
+          white.style.transform = `translateX(calc(-270vh + ${offsetY * 0.8}px)`;
+          whiteBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+        }
       }
+      
   
       if (purple) {
-        purple.style.transform = `translateX(calc(380vh - ${offsetY}px)`
-        purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
-
+                // Size for desktop
+                if (w > 511) {
+                  purple.style.transform = `translateX(calc(400vh - ${offsetY}px)`
+                  purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+                }
+                // Size for iphone 12 pro (width - 390)
+                else if (w <= 510 && w > 400) {
+                  purple.style.transform = `translateX(calc(380vh - ${offsetY}px)`
+                  purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+                }
+                // Size for iphone XR pro (width - 414)
+                else if (w <= 400 && w > 385) {
+                  purple.style.transform = `translateX(calc(380vh - ${offsetY}px)`
+                  purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+                }
+                // Samsung S8 (width 360)
+                else if (w <= 365 && w > 350) {
+                  purple.style.transform = `translateX(calc(422vh - ${offsetY}px)`
+                  purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+                }
+                // Size for iphone SE pro (width - 390)
+                else if (w <= 380) {
+                  purple.style.transform = `translateX(calc(460vh - ${offsetY}px)`
+                  purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+                }
       }
   
       if (black) {
-        black.style.transform = `translateX(calc(-420vh + ${offsetY * 0.8}px)`;
-        blackBg.style.backgroundPositionY = `-${offsetY * 0.5}px`
+                        // Size for desktop
+                        if (w > 511) {
+                          black.style.transform = `translateX(calc(-420vh + ${offsetY * 0.8}px)`;
+                          blackBg.style.backgroundPositionY = `-${offsetY * 0.5}px`
+                        }
+                        // Size for iphone 12 pro (width - 390)
+                        else if (w <= 510 && w > 400) {
+                          black.style.transform = `translateX(calc(-370vh + ${offsetY * 0.8}px)`;
+                          blackBg.style.backgroundPositionY = `-${offsetY * 0.5}px`
+                        }
+                        // Size for iphone XR (width - 414)
+                        else if (w <= 400 && w > 385) {
+                          black.style.transform = `translateX(calc(-400vh + ${offsetY * 0.8}px)`;
+                          blackBg.style.backgroundPositionY = `-${offsetY * 0.5}px`
+                        }
+                        // Samsung S8 (width 360)
+                        else if (w <= 365 && w > 350) {
+                          black.style.transform = `translateX(calc(-420vh + ${offsetY * 0.8}px)`;
+                          blackBg.style.backgroundPositionY = `-${offsetY * 0.5}px`
+                        }
+                        // Size for iphone SE pro (width - 390)
+                        else if (w <= 380) {
+                          black.style.transform = `translateX(calc(-450vh + ${offsetY * 0.8}px)`;
+                          blackBg.style.backgroundPositionY = `-${offsetY * 0.5}px`
+                        }
       }
+
+      console.log(w, h);
     };
   
     // Animation for Haptic feedback, and Adaptive triggers image

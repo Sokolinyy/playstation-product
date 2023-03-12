@@ -15,19 +15,19 @@ const Main = () => {
     <div className="main">
       <div className="bgImage">
         <img className="bgDualsense" src={bgDualsense} alt="" />
+        <div className="productInfoContainer">
+          <p className="productName">DualSense™ Wireless Controller</p>
+          <div className="productDescription">
+            <p>
+              Discover a deeper gaming experience with the innovative new PS5™
+              controller
+            </p>
+            <p>
+              Delivery at no extra cost when you buy direct from PlayStation.
+              Conditions apply.
+            </p>
+          </div>
       </div>
-      <div className="productInfoContainer">
-        <p className="productName">DualSense™ Wireless Controller</p>
-        <div className="productDescription">
-          <p>
-            Discover a deeper gaming experience with the innovative new PS5™
-            controller
-          </p>
-          <p>
-            Delivery at no extra cost when you buy direct from PlayStation.
-            Conditions apply.
-          </p>
-        </div>
       </div>
       <section className="feature">
         <h2 className="new-section-h2">Bring gaming worlds to life</h2>
