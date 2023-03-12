@@ -28,27 +28,27 @@ const Dualsense = () => {
         // Size for desktop
         if (w > 511) {
           white.style.transform = `translateX(calc(-250vh + ${offsetY * 0.8}px)`;
-          whiteBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+          whiteBg.style.backgroundPositionY = `${offsetY * 0.2}px`
         }
         // Size for iphone 12 pro (width - 390)
         else if (w <= 510 && w > 400) {
           white.style.transform = `translateX(calc(-220vh + ${offsetY * 0.8}px)`;
-          whiteBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+          whiteBg.style.backgroundPositionY = `${offsetY * 0.2}px`
         }
         // Size for iphone XR pro (width - 414)
         else if (w <= 400 && w > 385) {
-          white.style.transform = `translateX(calc(-230vh + ${offsetY * 0.8}px)`;
-          whiteBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+          white.style.transform = `translateX(calc(-250vh + ${offsetY * 0.8}px)`;
+          whiteBg.style.backgroundPositionY = `${offsetY * 0.2}px`
         }
         // Samsung S8 (width 360)
         else if (w <= 365 && w > 350) {
           white.style.transform = `translateX(calc(-253vh + ${offsetY * 0.8}px)`;
-          whiteBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+          whiteBg.style.backgroundPositionY = `${offsetY * 0.2}px`
         }
         // Size for iphone SE pro (width - 390)
         else if (w <= 380) {
           white.style.transform = `translateX(calc(-270vh + ${offsetY * 0.8}px)`;
-          whiteBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+          whiteBg.style.backgroundPositionY = `${offsetY * 0.2}px`
         }
       }
       
@@ -56,28 +56,28 @@ const Dualsense = () => {
       if (purple) {
                 // Size for desktop
                 if (w > 511) {
-                  purple.style.transform = `translateX(calc(400vh - ${offsetY}px)`
-                  purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+                  purple.style.transform = `translateX(calc(380vh - ${offsetY}px)`
+                  purpleBg.style.backgroundPositionY = `${offsetY * 0.2}px`
                 }
                 // Size for iphone 12 pro (width - 390)
                 else if (w <= 510 && w > 400) {
                   purple.style.transform = `translateX(calc(380vh - ${offsetY}px)`
-                  purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+                  purpleBg.style.backgroundPositionY = `${offsetY * 0.2}px`
                 }
                 // Size for iphone XR pro (width - 414)
                 else if (w <= 400 && w > 385) {
-                  purple.style.transform = `translateX(calc(380vh - ${offsetY}px)`
-                  purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+                  purple.style.transform = `translateX(calc(410vh - ${offsetY}px)`
+                  purpleBg.style.backgroundPositionY = `${offsetY * 0.2}px`
                 }
                 // Samsung S8 (width 360)
                 else if (w <= 365 && w > 350) {
                   purple.style.transform = `translateX(calc(422vh - ${offsetY}px)`
-                  purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+                  purpleBg.style.backgroundPositionY = `${offsetY * 0.2}px`
                 }
                 // Size for iphone SE pro (width - 390)
                 else if (w <= 380) {
                   purple.style.transform = `translateX(calc(460vh - ${offsetY}px)`
-                  purpleBg.style.backgroundPositionY = `${offsetY * 0.5}px`
+                  purpleBg.style.backgroundPositionY = `${offsetY * 0.2}px`
                 }
       }
   
@@ -85,27 +85,27 @@ const Dualsense = () => {
                         // Size for desktop
                         if (w > 511) {
                           black.style.transform = `translateX(calc(-420vh + ${offsetY * 0.8}px)`;
-                          blackBg.style.backgroundPositionY = `-${offsetY * 0.5}px`
+                          blackBg.style.backgroundPositionY = `-${offsetY * 0.2}px`
                         }
                         // Size for iphone 12 pro (width - 390)
                         else if (w <= 510 && w > 400) {
                           black.style.transform = `translateX(calc(-370vh + ${offsetY * 0.8}px)`;
-                          blackBg.style.backgroundPositionY = `-${offsetY * 0.5}px`
+                          blackBg.style.backgroundPositionY = `-${offsetY * 0.2}px`
                         }
                         // Size for iphone XR (width - 414)
                         else if (w <= 400 && w > 385) {
-                          black.style.transform = `translateX(calc(-400vh + ${offsetY * 0.8}px)`;
-                          blackBg.style.backgroundPositionY = `-${offsetY * 0.5}px`
+                          black.style.transform = `translateX(calc(-410vh + ${offsetY * 0.8}px)`;
+                          blackBg.style.backgroundPositionY = `-${offsetY * 0.2}px`
                         }
                         // Samsung S8 (width 360)
                         else if (w <= 365 && w > 350) {
                           black.style.transform = `translateX(calc(-420vh + ${offsetY * 0.8}px)`;
-                          blackBg.style.backgroundPositionY = `-${offsetY * 0.5}px`
+                          blackBg.style.backgroundPositionY = `-${offsetY * 0.2}px`
                         }
                         // Size for iphone SE pro (width - 390)
                         else if (w <= 380) {
-                          black.style.transform = `translateX(calc(-450vh + ${offsetY * 0.8}px)`;
-                          blackBg.style.backgroundPositionY = `-${offsetY * 0.5}px`
+                          black.style.transform = `translateX(calc(-440vh + ${offsetY * 0.8}px)`;
+                          blackBg.style.backgroundPositionY = `-${offsetY * 0.2}px`
                         }
       }
 
@@ -122,15 +122,17 @@ const Dualsense = () => {
 
   return (
     <section className='dualsense'>
-      <h2 className='new-section-h2'>Choose your path</h2>
-      <div className="dualsenseContainer">
-        <div className="left">
-          <h2 className='colorName'>STAR LIGHT BLUE</h2>
-          <img className='blueDualImg' src={blueDual} alt="" />
-        </div>
-        <div className="right">
-        <h2 className='colorName'>COSMIC RED</h2>
-          <img className='redDualImg' src={redDual} alt="" />
+      <div>
+        <h2 className='new-section-h2'>Choose your path</h2>
+        <div className="dualsenseContainer">
+          <div className="left">
+            <h2 className='colorName'>STAR LIGHT BLUE</h2>
+            <img className='blueDualImg' src={blueDual} alt="" />
+          </div>
+          <div className="right">
+          <h2 className='colorName'>COSMIC RED</h2>
+            <img className='redDualImg' src={redDual} alt="" />
+          </div>
         </div>
       </div>
       <h2 className='new-section-h2'>AVAILABLE IN MANY COLORS</h2>
